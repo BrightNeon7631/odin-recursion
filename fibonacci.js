@@ -16,7 +16,6 @@ function fibIterative(n) {
         for (let i = 2; i < n; i++) {
             newValue = fibArray[positionOne] + fibArray[positionTwo];
             fibArray.push(newValue);
-
             positionOne = positionOne + 1;
             positionTwo = positionTwo + 1;
         }
@@ -32,7 +31,7 @@ function fibRecursive(n) {
         return [0, 1];
     } else {
         let a = fibRecursive(n - 1);
-        // The nth number appears on the position n - 1 on the array
+        // The nth number appears on the position n - 1 in the array
 	// n - 2 = n - 1 - 1; n - 3 = n - 2 - 1 etc.
         a.push(a[a.length - 1] + a[a.length - 2]);
         return a;
